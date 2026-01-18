@@ -1,0 +1,7 @@
+package com.rebellion.git_and_github.repository;
+
+import com.rebellion.git_and_github.Entity.Task;
+
+public interface TaskRepo {
+    Task save(Task task);
+}
