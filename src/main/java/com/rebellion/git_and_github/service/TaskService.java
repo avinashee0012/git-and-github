@@ -8,4 +8,5 @@ import com.rebellion.git_and_github.dto.TaskRequestDto;
 public interface TaskService {
     Task createTask(TaskRequestDto task);
     List<Task> getAllTasks();
+    Task markTaskDone(int taskId);
 }
