@@ -1,5 +1,7 @@
 package com.rebellion.git_and_github.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.rebellion.git_and_github.Entity.Task;
@@ -18,5 +20,10 @@ public class TaskServiceImpl implements TaskService{
     public Task createTask(TaskRequestDto requestDto) {
         Task task = new Task(requestDto.getTitle(), requestDto.getDescription());
         return taskRepo.save(task);
+    }
+
+    @Override
+    public List<Task> getAllTasks() {
+        return taskRepo.findAll();
     }
 }
