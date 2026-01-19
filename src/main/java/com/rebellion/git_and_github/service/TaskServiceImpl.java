@@ -26,4 +26,12 @@ public class TaskServiceImpl implements TaskService{
     public List<Task> getAllTasks() {
         return taskRepo.findAll();
     }
+
+    @Override
+    public Task markTaskDone(int taskId) {
+        Task task = taskRepo.findById(taskId);
+        if(task == null) throw new IllegalArgumentException("Invalid task id");
+        task.markDone();
+        return taskRepo.update(task);
+    }
 }
