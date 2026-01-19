@@ -24,4 +24,16 @@ public class TaskRepoImpl implements TaskRepo{
     public List<Task> findAll() {
         return List.copyOf(tasks.values());
     }
+
+    @Override
+    public Task findById(int taskId) {
+        if (tasks.containsKey(taskId)) return tasks.get(taskId);
+        return null;
+    }
+
+    @Override
+    public Task updateById(Task validTask) {
+        tasks.put(validTask.getId(), validTask);
+        return tasks.get(validTask.getId());
+    }
 }
