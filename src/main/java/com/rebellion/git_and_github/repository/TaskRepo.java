@@ -8,5 +8,5 @@ public interface TaskRepo {
     Task save(Task task);
     List<Task> findAll();
     Task findById(int taskId);
-    Task updateById(Task task);
+    Task update(Task task);
 }

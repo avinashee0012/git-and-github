@@ -32,7 +32,7 @@ public class TaskRepoImpl implements TaskRepo{
     }
 
     @Override
-    public Task updateById(Task validTask) {
+    public Task update(Task validTask) {
         tasks.put(validTask.getId(), validTask);
         return tasks.get(validTask.getId());
     }
