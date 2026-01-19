@@ -1,6 +1,7 @@
 package com.rebellion.git_and_github.repository;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -17,5 +18,10 @@ public class TaskRepoImpl implements TaskRepo{
         task.setId(id);
         tasks.put(id, task);
         return tasks.get(id);
+    }
+
+    @Override
+    public List<Task> findAll() {
+        return List.copyOf(tasks.values());
     }
 }
