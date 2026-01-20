@@ -35,7 +35,11 @@ public class TaskServiceImpl implements TaskService{
         return taskRepo.update(task);
     }
 
+    // Merge conflict simulation
     public void sampleMethod2(){
         // logic B
+    }
+    public void sampleMethod(){
+        // logic A
     }
 }
