@@ -34,4 +34,8 @@ public class TaskServiceImpl implements TaskService{
         task.markDone();
         return taskRepo.update(task);
     }
+
+    public void sampleMethod(){
+        // logic A
+    }
 }
